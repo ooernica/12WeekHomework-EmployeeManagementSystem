@@ -1,14 +1,14 @@
-DROP DATABASE IF EXISTS employerTracker;
-CREATE DATABASE employerTracker;
-USE employerTracker;
+DROP DATABASE IF EXISTS employeetracker;
+CREATE DATABASE employeetracker;
+USE employeetracker;
 
-CREATE table department)
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+CREATE table department(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE role(
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL NOT NULL, 
     department_id INT NOT NULL,
@@ -16,13 +16,13 @@ CREATE TABLE role(
 );
 
 CREATE TABLE employee(
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INT NOT NULL,
     manager_id INT DEFAULT NULL,
     FOREIGN KEY (role_id) REFERENCES role (id),
-    FOREIGN KEY (manager_id) REFERNCES employee (id)
+    FOREIGN KEY (manager_id) REFERENCES employee (id)
 );
 
 

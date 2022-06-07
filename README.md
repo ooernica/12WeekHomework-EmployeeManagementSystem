@@ -54,7 +54,7 @@ CJ Sanders
 
 ## Video
 
-See the video of the code in action [here]()
+See the video of the code in action [here](https://drive.google.com/file/d/1HbLkUq0co6ZI099sst7Xlk0MwQr4gUVr/view)
 
 ## Tests
 N/A
